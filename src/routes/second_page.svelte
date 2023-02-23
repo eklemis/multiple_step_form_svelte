@@ -2,6 +2,9 @@
 	import Switch from './switch.svelte';
 	import { createEventDispatcher } from 'svelte';
 	import { num_to_type } from '/src/lib/biling';
+	import ArcadeIcon from '/src/lib/images/icon-arcade.svg';
+	import AdvancedIcon from '/src/lib/images/icon-advanced.svg';
+	import ProIcon from '/src/lib/images/icon-pro.svg';
 
 	const dispatch = createEventDispatcher();
 
@@ -53,7 +56,7 @@
 			}`}
 			on:click={() => change_selected_type(1)}
 		>
-			<img src="/src/lib/images/icon-arcade.svg" alt="" class="w-12 h-12 rounded-full" />
+			<img src={ArcadeIcon} alt="" class="w-12 h-12 rounded-full" />
 			<div class="flex flex-col items-start">
 				<p class=" text-md text-marine_blue font-medium">Arcade</p>
 				<span class=" text-cool_gray">${price.arcade}/mo</span>
@@ -67,7 +70,7 @@
 			}`}
 			on:click={() => change_selected_type(2)}
 		>
-			<img src="/src/lib/images/icon-advanced.svg" alt="" class="w-12 h-12 rounded-full" />
+			<img src={AdvancedIcon} alt="" class="w-12 h-12 rounded-full" />
 			<div class="flex flex-col items-start">
 				<p class=" text-md text-marine_blue font-medium">Advanced</p>
 				<span class=" text-cool_gray">${price.advanced}/mo</span>
@@ -81,7 +84,7 @@
 			}`}
 			on:click={() => change_selected_type(3)}
 		>
-			<img src="/src/lib/images/icon-pro.svg" alt="" class="w-12 h-12 rounded-full" />
+			<img src={ProIcon} alt="" class="w-12 h-12 rounded-full" />
 			<div class="flex flex-col items-start">
 				<p class=" text-md text-marine_blue font-medium">Pro</p>
 				<span class=" text-cool_gray">${price.pro}/mo</span>
