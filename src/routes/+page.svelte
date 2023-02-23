@@ -96,7 +96,6 @@
 	$: total_per_month =
 		summary.monthly_charge +
 		summary.addons.map((adn) => adn.per_month).reduce((prev, curr) => prev + curr, 0);
-	$: console.log('page-PI:', personal_info);
 </script>
 
 <svelte:head>
@@ -104,7 +103,7 @@
 	<meta name="description" content="Multiple Form Step" />
 </svelte:head>
 <div
-	class="app bg-magnolia md:bg-light_grey md:flex md:bg-white md:min-w-4xl md:max-w-4xl md:w-4xl md:relative md:p-5 md:rounded-lg md:h-4/5 overflow-hidden"
+	class="bg-magnolia md:bg-light_grey md:flex md:bg-white md:min-w-4xl md:max-w-4xl md:w-4xl md:relative md:p-5 md:rounded-lg md:h-4/5 overflow-hidden"
 >
 	<nav class="h-44 md:w-[274px] md:h-full bg-purplish_blue md:rounded-xl">
 		<ul
@@ -148,8 +147,8 @@
 			</li>
 		</ul>
 	</nav>
-	<main class="-mt-20 md:mt-0 p-10 md:p-0 md:w-[450px]">
-		<section class="p-8 bg-white rounded-lg">
+	<main class="flex justify-center -mt-20 md:mt-0 md:p-0 md:w-[450px]">
+		<section class="w-[375px] p-8 bg-white rounded-lg">
 			{#if selected_num === 1}
 				<FirstPage bind:personal_info />
 			{:else if selected_num === 2}

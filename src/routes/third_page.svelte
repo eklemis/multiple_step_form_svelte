@@ -25,23 +25,25 @@
 <ul class="flex flex-col gap-y-4 mt-8">
 	{#each all_addons as adn, idx ('addon-' + idx)}
 		<li
-			class={`flex items-center justify-start gap-x-4 border rounded-md p-4  w-full ${
+			class={`flex items-center justify-between gap-x-4 border rounded-md p-3 md:p-4  w-full ${
 				adn.selected ? 'border-marine_blue' : ''
 			}`}
 		>
-			<input
-				name={adn.id}
-				type="checkbox"
-				value={adn.id}
-				class="w-5 h-5 rounded border-light_gray checked:purplish_blue"
-				bind:checked={all_addons[idx].selected}
-				on:change={addons_change}
-			/>
-			<div>
-				<p class="font-bold text-marine_blue">{adn.title}</p>
-				<p class=" text-cool_gray">{adn.desc}</p>
+			<div class="flex gap-x-2 items-center">
+				<input
+					name={adn.id}
+					type="checkbox"
+					value={adn.id}
+					class="w-5 h-5 rounded border-light_gray checked:purplish_blue"
+					bind:checked={all_addons[idx].selected}
+					on:change={addons_change}
+				/>
+				<div>
+					<p class="font-bold text-marine_blue">{adn.title}</p>
+					<p class=" text-cool_gray">{adn.desc}</p>
+				</div>
 			</div>
-			<span class="block absolute right-20 text-purplish_blue">+${adn.per_month}/mo</span>
+			<span class="text-purplish_blue text-right">+${adn.per_month}/mo</span>
 		</li>
 	{/each}
 </ul>
