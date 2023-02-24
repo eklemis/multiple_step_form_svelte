@@ -13,3 +13,4 @@ vite.config.ts.timestamp-*
 /design
 README-template.md
 style-guide.md
+.npmrc
