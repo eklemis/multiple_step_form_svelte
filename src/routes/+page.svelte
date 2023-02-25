@@ -105,7 +105,7 @@
 <div
 	class="bg-magnolia md:bg-light_grey md:flex md:bg-white md:min-w-4xl md:max-w-4xl md:w-4xl md:relative md:p-5 md:rounded-lg md:h-4/5 overflow-hidden"
 >
-	<nav class="h-44 md:w-[274px] md:h-full bg-purplish_blue md:rounded-xl">
+	<nav class="h-44 md:w-[274px] md:h-full bg-purplish_blue md:rounded-xl" aria-label="main">
 		<ul
 			class="flex justify-center gap-y-8 w-full p-10 md:rounded-xl md:flex-col md:justify-start h-full bg-cover md:bg-left-bottom bg-no-repeat bg-[url('/src/lib/images/bg-sidebar-mobile.svg')] md:bg-[url('/src/lib/images/bg-sidebar-desktop.svg')]"
 		>
@@ -185,6 +185,7 @@
 		</section>
 	</main>
 	<nav
+		aria-label="secondary"
 		class="flex justify-between bg-white w-screen h-16 absolute left-0 bottom-0 p-4 md:w-[390px] md:left-[320px] md:bottom-5 md:px-9"
 	>
 		{#if selected_num < 4}

@@ -37,6 +37,7 @@
 			type="text"
 			placeholder="e.g. Stephen King"
 			name="name"
+			id="name"
 			bind:value={personal_info.name}
 			class={`h-10 px-3 border rounded border-inherit text-marine_blue focus:outline-none ${
 				is_empty(personal_info.name) ? 'focus:border-red-500' : 'focus:border-purplish_blue'
@@ -54,6 +55,7 @@
 			type="email"
 			placeholder="e.g. stephenking@lorem.com"
 			name="email"
+			id="email"
 			bind:value={personal_info.email}
 			class={`h-10 px-3 border rounded border-inherit text-marine_blue focus:outline-none ${
 				is_empty(personal_info.email) ? 'focus:border-red-500' : 'focus:border-purplish_blue'
@@ -71,6 +73,7 @@
 			type="text"
 			placeholder="e.g. +1 234 567 890"
 			name="phone"
+			id="phone"
 			bind:value={personal_info.phone}
 			class={`h-10 px-3 border rounded border-inherit text-marine_blue focus:outline-none ${
 				is_empty(personal_info.phone) ? 'focus:border-red-500' : 'focus:border-purplish_blue'
