@@ -19,7 +19,7 @@
 			: 'text-magnolia';
 </script>
 
-<button class="flex items-center gap-x-5 cursor-pointer" on:click={activate_menu}>
+<a class="flex items-center gap-x-5 cursor-pointer" href={'#'} on:click={activate_menu}>
 	<span
 		class={`flex w-10 h-10 items-center justify-center border font-bold rounded-full md:w-12 md:h-12 ${sel_class}`}
 		>{order}</span
@@ -28,4 +28,4 @@
 		<p class="uppercase text-cool_gray hidden md:inline">{title}</p>
 		<p class="uppercase font-bold text-magnolia hidden md:inline">{action_name}</p>
 	</div>
-</button>
+</a>

@@ -184,7 +184,7 @@
 			{/if}
 		</section>
 	</main>
-	<div
+	<nav
 		class="flex justify-between bg-white w-screen h-16 absolute left-0 bottom-0 p-4 md:w-[390px] md:left-[320px] md:bottom-5 md:px-9"
 	>
 		{#if selected_num < 4}
@@ -203,7 +203,7 @@
 				on:click={go_next}>Confirm</button
 			>
 		{/if}
-	</div>
+	</nav>
 </div>
 
 <style lang="postcss">
